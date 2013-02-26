@@ -37,6 +37,13 @@ xterm*|rxvt*)
     ;;
 esac
 
+# Alias definitions.
+# ~/.bash_aliases, instead of adding them here directly.
+
+if [ -f ~/.bash-config/bash_aliases ]; then
+    . ~/.bash-config/bash_aliases
+fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -49,28 +56,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# ~/.bash_aliases, instead of adding them here directly.
-
-#if [ -f .bash_aliases ]; then
-    #. .bash_aliases
-#fi
-
-alias r='bundle exec rake'
-alias gs='git status'
-alias gc='git commit -m'
-alias ga='git add .'
-alias gp='rake && git push'
-alias gf='git fetch && git rebase origin/master'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
