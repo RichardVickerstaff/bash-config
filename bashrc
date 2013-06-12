@@ -69,5 +69,6 @@ fi
 
 LD_LIBRARY_PATH="$HOME /usr/lib/oracle/11.2/client64/lib"
 
+PATH=$PATH:$HOME/bin # Add bin to PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
