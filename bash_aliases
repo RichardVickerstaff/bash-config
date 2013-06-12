@@ -4,13 +4,14 @@ alias cucumber='bundle exec cucumber'
 alias rspec='bundle exec rspec'
 
 # git aliases
-alias gg='gitg&'
 alias gs='git status'
-alias gc='git commit -m'
+alias gc='git commit'
 alias ga='git add .'
 alias gaa='git add -A'
 alias gp='rake && git push'
 alias gf='git fetch && git rebase origin/master'
+alias gg='gitg&'
+alias gitg='gitg&'
 
 
 # some more ls aliases
