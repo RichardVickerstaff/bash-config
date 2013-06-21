@@ -10,9 +10,22 @@ alias ga='git add .'
 alias gaa='git add -A'
 alias gp='rake && git push'
 alias gf='git fetch && git rebase origin/master'
-alias gg='gitg&'
+alias gg='gitg'
 alias gitg='gitg&'
 
+# tmux aliases #
+alias tmux='tmux -2' #launch tmux in 256 colours
+alias tl='tmux ls'
+alias tls='tl'
+alias tm='tmux_create_or_attach'
+
+function tmux_create_or_attach(){
+  session="$1"
+  if [[ ! $(tmux has-session -t "$session" &>/dev/null) ]] ; then
+    tmux new -s "$session" -d
+  fi
+  tmux attach -t "$session"
+}
 
 # some more ls aliases
 #(rest in bashrc e.g. setting colour)
