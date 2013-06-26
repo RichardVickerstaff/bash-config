@@ -27,6 +27,9 @@ function tmux_create_or_attach(){
   tmux attach -t "$session"
 }
 
+# Some random stuff
+alias ack='ack-grep'
+
 # some more ls aliases
 #(rest in bashrc e.g. setting colour)
 alias ll='ls -alF'
