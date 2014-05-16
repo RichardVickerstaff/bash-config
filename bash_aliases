@@ -4,7 +4,7 @@ alias cucumber='bundle exec cucumber'
 alias rspec='bundle exec rspec'
 
 # git aliases
-alias gs='git status'
+alias gst='git status'
 alias gc='git commit'
 alias ga='git add .'
 alias gaa='git add -A'
